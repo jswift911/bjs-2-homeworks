@@ -1,3 +1,5 @@
+"use strict";
+
 class AlarmClock {
     constructor() {
         this.alarmCollection = [];
