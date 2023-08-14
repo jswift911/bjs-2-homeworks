@@ -1,4 +1,6 @@
+"use strict";
 //Задача № 1
+
 function cachingDecoratorNew(func) {
     let cache = [];
 
