@@ -1,4 +1,5 @@
 "use strict";
+
 //Задача № 1
 
 function cachingDecoratorNew(func) {
@@ -54,6 +55,7 @@ function debounceDecoratorNew(func, delay) {
     return wrapper;
 }
 
+//Проверки
 const sendSignal = (signalOrder, delay) => console.log("Сигнал отправлен", signalOrder, delay);
 const upgradedSendSignal = debounceDecoratorNew(sendSignal, 2000);
 setTimeout(() => upgradedSendSignal(1, 0)); // Сигнал отправлен + будет запланирован асинхронный запуск, который будет проигнорирован, так как следующий сигнал отменит предыдущий (300 - 0 < 2000)
